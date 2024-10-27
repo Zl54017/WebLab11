@@ -37,7 +37,7 @@ router.post('/', async function (req, res, next) {
       return res.status(400).json({ error: 'You already generated 3 QR Codes or you are not logged in!' });
     }
 
-    const detailsUrl = `${process.env.BASE_URL}/details?uuid=${newUuid}`;
+    const detailsUrl = `https://weblab11.onrender.com//details?uuid=${newUuid}`;
 
     const url = await QRCode.toDataURL(detailsUrl); 
 
