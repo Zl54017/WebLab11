@@ -35,12 +35,8 @@ const port = process.env.PORT || 3000;
 const config = {
   authRequired: false,
   auth0Logout: true,
-  baseURL: process.env.BASE_URL || `http://localhost:${port}`
+  baseURL: process.env.BASE_URL || "https://weblab11.onrender.com"
 };
-
-if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
-  config.baseURL = `http://localhost:${port}`;
-}
 
 app.use(auth(config));
 
