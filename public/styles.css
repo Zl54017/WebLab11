@@ -1,0 +1,167 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main wrapper to take full height */
+body > div.main-content {
+    flex: 1; /* Main content will take the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #777;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90vw; /* Slightly away from the page edges */
+    height: 4vw;
+    margin: 0 auto; /* Centers the navbar horizontally */
+    margin-top: 0.5vw;
+    border-radius: 8px; /* Optional rounded corners for a smoother look */
+}
+
+.navbar .left {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar div {
+    color: #e0e0e0;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.botun:hover {
+    background-color: #555;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #e0e0e0;
+    padding: 40px;
+    text-align: center;
+    width: 93vw;
+    flex-grow: 1; /* Ensures the content area grows to fill space */
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+    width: 93vw;
+    margin-top: auto; /* Pushes the footer to the bottom when content is short */
+}
+
+/* Links */
+.underline {
+    color: #e0e0e0;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.underline:hover {
+    color: #e0e0e0;
+    background-color: #555;
+    text-decoration: none;
+}
+
+.underline2 {
+    color: #555;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.underline2:hover {
+    color: #555;
+    background-color: #e0e0e0;
+    text-decoration: none;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Razmak između input polja */
+    background-color: #666; /* Svjetlija tamnosiva boja */
+    padding: 30px;
+    border-radius: 10px; /* Zaobljeni rubovi forme */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Blaga sjena */
+    width: 300px; /* Širina forme */
+    margin: 0 auto; /* Centriranje forme */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #f0f0f0; /* Svijetla boja za tekst */
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #888; /* Svjetliji obrub */
+    background-color: #444; /* Tamnija pozadina za input */
+    color: #fff; /* Svjetliji tekst unutar input polja */
+    border-radius: 5px;
+    width: 100%;
+}
+
+input:focus {
+    border-color: #999; /* Svjetliji obrub kad je input aktivan */
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #777; /* Svjetlija tamna boja za gumb */
+    color: #fff; /* Bijeli tekst */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #999; /* Još svjetlija tamna boja na hover */
+}
+

@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+<div class="main-content">
+    <h1 class="title">QR Code Details</h1>
+    <p><strong>Welcome User: </strong> <%= user.nickname %></p>
+    <p><strong>OIB:</strong> <%= locals.oib %></p>
+    <p><strong>First Name:</strong> <%= locals.firstName %></p>
+    <p><strong>Last Name:</strong> <%= locals.lastName %></p>
+    <p><strong>Time of Creation:</strong> <%= new Date(timeOfCreation).toLocaleString('hr-HR', { 
+        year: 'numeric', 
+        month: '2-digit', 
+        day: '2-digit', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        hour12: false 
+    }).replace(',', '') %></p>
+</div>
+<%- include('partials/footer') -%>

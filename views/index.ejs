@@ -1,0 +1,31 @@
+<%- include('partials/header') -%>
+<div class="main-content">
+    <h1 class="title">QR Code Generator Home Page</h1>
+    <p>Currently generated QR codes: <%= locals.qrCodeCount %></p>
+    <form action="/" method="POST" id="qrForm">
+        <div class="form-group">
+            <label for="oib">OIB:</label>
+            <input type="text" id="oib" name="oib" required placeholder="Enter your OIB">
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+        </div>
+        <button type="submit" class="submit-btn">Generate QR Code</button>
+    </form>
+    <% if (locals.isAuthenticated) { %>
+        <% if (locals.qrCodeUrl) { %>
+            <h3>Your Generated QR Code:</h3>
+            <a href="http://localhost:3000/details?uuid=<%= encodeURIComponent(locals.uuid) %>" target="_blank">
+                <img src="<%= locals.qrCodeUrl %>" alt="Generated QR Code">
+            </a>
+        <% } %>   
+    <% } else { %>
+        <a href="/login" class="underline2">Login to generate</a>
+    <% } %>
+</div>
+<%- include('partials/footer') -%>
