@@ -20,7 +20,7 @@
     <% if (locals.isAuthenticated) { %>
         <% if (locals.qrCodeUrl) { %>
             <h3>Your Generated QR Code:</h3>
-            <a href="http://localhost:3000/details?uuid=<%= encodeURIComponent(locals.uuid) %>" target="_blank">
+            <a href="https://weblab11.onrender.com/details?uuid=<%= encodeURIComponent(locals.uuid) %>" target="_blank">
                 <img src="<%= locals.qrCodeUrl %>" alt="Generated QR Code">
             </a>
         <% } %>   
